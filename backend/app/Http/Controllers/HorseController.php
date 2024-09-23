@@ -14,19 +14,19 @@ class HorseController extends Controller
     public function list()
     {
         $horses = $this->getHorses();
-        return view("horse.list", $horses);
+        return view("horse.list", ["horses" => $horses]);
     }
 
     public function table()
     {
         $horses = $this->getHorses();
-        return view("horse.table", $horses);
+        return view("horse.table", ["horses" => $horses]);
     }
 
     public function grid()
     {
         $horses = $this->getHorses();
-        return view("horse.grid", $horses);
+        return view("horse.grid", ["horses" => $horses]);
     }
 
     private function getHorses()
